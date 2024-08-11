@@ -21,7 +21,7 @@ const GiftBox = () => {
         </div>
         {isOpened && (
           <div className="box-message">
-            <span>Yeni işinde bol şans ve başarılar dilerim zehra 🎉</span>
+            <span>Yeni işinde bol şans ve başarılar dilerim zehracım 🎉</span>
           </div>
         )}
       </div>
