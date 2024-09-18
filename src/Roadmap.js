@@ -2,64 +2,56 @@ import React from 'react';
 import './Roadmap.css';
 
 const Roadmap = () => {
+  const milestones = [
+    {
+      day: '12',
+      month: 'AUG',
+      year: '2024',
+      title: 'İlk iş günü',
+    },
+    {
+      day: '**',
+      month: '***',
+      year: '****',
+      title: 'İlk satış',
+    },
+    {
+      day: '**',
+      month: '***',
+      year: '****',
+      title: 'İlk 10 satış',
+    },
+    {
+      day: '**',
+      month: '***',
+      year: '****',
+      title: 'ilk 50 satış',
+    },
+    {
+      day: '**',
+      month: '***',
+      year: '****',
+      title: 'İlk 100 satış',
+    },
+  ];
+
   return (
     <section id="timeline">
-      <article>
-        <div className="inner">
-          <span className="date">
-            <span className="day">12<sup>th</sup></span>
-            <span className="month">AUG</span>
-            <span className="year">2024</span>
-          </span>
-          <h2>İlk iş günü</h2>
-          <p className="empty"></p>
-        </div>
-      </article>
-      <article>
-        <div className="inner">
-          <span className="date">
-            <span className="day">**<sup>th</sup></span>
-            <span className="month">***</span>
-            <span className="year">****</span>
-          </span>
-          <h2>İlk satış</h2>
-          <p className="empty"></p>
-        </div>
-      </article>
-      <article>
-        <div className="inner">
-          <span className="date">
-            <span className="day">**<sup>th</sup></span>
-            <span className="month">***</span>
-            <span className="year">****</span>
-          </span>
-          <h2>İlk 10 satış</h2>
-          <p className="empty"></p>
-        </div>
-      </article>
-      <article>
-        <div className="inner">
-          <span className="date">
-            <span className="day">**<sup>th</sup></span>
-            <span className="month">***</span>
-            <span className="year">****</span>
-          </span>
-          <h2>ilk 50 satış</h2>
-          <p className="empty"></p>
-        </div>
-      </article>
-      <article>
-        <div className="inner">
-          <span className="date">
-            <span className="day">**<sup>th</sup></span>
-            <span className="month">***</span>
-            <span className="year">****</span>
-          </span>
-          <h2>İlk 100 satış</h2>
-        </div>
-      </article>
+      {milestones.map((milestone, index) => (
+        <article key={index}>
+          <div className="inner">
+            <span className="date">
+              <span className="day">{milestone.day}<sup>th</sup></span>
+              <span className="month">{milestone.month}</span>
+              <span className="year">{milestone.year}</span>
+            </span>
+            <h2>{milestone.title}</h2>
+            <p className='empty'></p>
+          </div>
+        </article>
+      ))}
     </section>
   );
-}
+};
 
 export default Roadmap;
